@@ -1,0 +1,12 @@
+[user]
+	name = Ryohei Shioji
+	email = rshioji@yahoo-corp.jp
+
+[alias]
+  st = status
+  cm = commit
+  b = branch
+  co = checkout
+
+[merge]
+	ff = false
