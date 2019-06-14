@@ -13,3 +13,6 @@ bind generic ; :
 bind refs C !git checkout %(branch)
 bind refs N <?git checkout -b %(prompt) %(branch)
 bind refs F @git fetch %(remote) %(branch)
+bind refs d ?git branch -d %(branch)
+bind refs D ?git branch -D %(branch)
+bind diff A !git commit --amend
