@@ -17,6 +17,7 @@ ln -sh ~/.dotfiles/vim/.vimrc-neocomplete ~/.vim/.vimrc-neocomplete
 ln -sh ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 ln -sh ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -sh ~/.dotfiles/dein/dein.toml ~/.vim/dein/dein.toml
+ln -sh ~/.dotfiles/tig/.tigrc ~/.tigrc
 
 # deinのインストール
 sh ~/.dotfiles/dein/installer.sh ~/.vim/dein
