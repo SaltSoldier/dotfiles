@@ -1,8 +1,15 @@
 # mainビューの左端にコミット番号表示
 set main-view = id date author:email-user commit-title:graph=yes,refs=yes
+# マウス反映
+set mouse = true
 
 # key bind
 bind main R <git rebase -i %(commit)
 bind generic S @git stash
 bind generic P @git stash pop
 bind generic L !git reflog
+bind generic <Ctrl-r> refresh
+bind generic ; :
+bind refs C !git checkout %(branch)
+bind refs N <?git checkout -b %(prompt) %(branch)
+bind refs F @git fetch %(remote) %(branch)
