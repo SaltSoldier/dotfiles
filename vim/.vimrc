@@ -1,5 +1,13 @@
 set number
 
+" 保存行を1000行？
+set viminfo='20,\"1000
+
+" USキーボード用コマンド
+" ノーマルモード時だけ ; と : を入れ替える
+nnoremap ; :
+nnoremap : ;
+
 " スワップファイルを作らない
 set noswapfile
 " インデントはスマートインデント
@@ -191,4 +199,7 @@ if has("autocmd")
     \   exe "normal! g'\"" |
     \ endif
 endif
+
 """"""""""""""""""""""""""""""
+" コメントアウトの色を灰色に
+hi Comment ctermfg=gray
