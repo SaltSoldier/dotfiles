@@ -1,0 +1,2 @@
+# mainビューの左端にコミット番号表示
+set main-view = id date author:email-user commit-title:graph=yes,refs=yes
