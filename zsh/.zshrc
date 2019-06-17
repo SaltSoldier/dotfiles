@@ -41,6 +41,13 @@ setopt hist_verify
 autoload -U compinit
 compinit
 
+## tmux のパイプラインにgitのブランチ名を表示するための関数
+#function precmd() {
+#  if [ ! -z $TMUX ]; then
+#    tmux refresh-client -S
+#  fi
+#}
+
 # 端末起動時にtmuxを起動
 if [[ ! -n $TMUX && $- == *l* ]]; then
   # get the IDs
