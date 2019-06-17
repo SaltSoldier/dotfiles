@@ -16,4 +16,5 @@ bind refs F @git fetch %(remote) %(branch)
 bind refs d ?git branch -d %(branch)
 bind refs D ?git branch -D %(branch)
 bind diff A <git commit --amend
+bind diff C ?git cherry-pick %(commit)
 bind status c <git commit
