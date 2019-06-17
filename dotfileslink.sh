@@ -18,6 +18,10 @@ ln -sh ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 ln -sh ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -sh ~/.dotfiles/dein/dein.toml ~/.vim/dein/dein.toml
 ln -sh ~/.dotfiles/tig/.tigrc ~/.tigrc
+#ln -sh ~/.dotfiles/tmux/tmux-pane-border /usr/local/bin/ # tmuxでgitのブランチ名を表示するためのソース
 
 # deinのインストール
 sh ~/.dotfiles/dein/installer.sh ~/.vim/dein
+
+# tmuxプラグインマネージャーのtpmをクローン
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
