@@ -20,7 +20,7 @@ export SAVEHIST=100000
 # 色設定
 autoload -Uz colors
 colors
-PROMPT=$'%{\e[38;5;050m%}[%n@%m]%{\e[0m%}%{\e[38;5;01m%}/%C%{\e[0m%} '
+PROMPT=$'%{\e[38;5;050m%}[%n@%m]%{\e[0m%}%{\e[38;5;226m%}/%C%{\e[0m%} '
 
 # 重複を記録しない
 setopt hist_ignore_dups
