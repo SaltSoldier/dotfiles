@@ -37,8 +37,9 @@ setopt hist_no_store
 # ヒストリを呼び出してから実行する間に一旦編集可能
 setopt hist_verify
 
-# 開始と終了を記録
-setopt EXTENDED_HISTORY
+# コマンド補完反映
+autoload -U compinit
+compinit
 
 # 端末起動時にtmuxを起動
 if [[ ! -n $TMUX && $- == *l* ]]; then
@@ -58,7 +59,3 @@ if [[ ! -n $TMUX && $- == *l* ]]; then
     :  # Start terminal normally
   fi
 fi
-
-# コマンド補完反映
-autoload -U compinit
-compinit
