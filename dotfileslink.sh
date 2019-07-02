@@ -1,8 +1,12 @@
 # 初めからあるファイルを削除
+rm ~/.zshrc
 rm ~/.vimrc
 rm ~/.tmux.conf
+rm ~/.gitconfig
+rm ~/.tigrc
 rm -rf ~/.vim
 rm -rf ~/.config/nvim
+rm -rf ~/.tmux
 
 # ディレクトリ生成
 mkdir ~/.vim
@@ -11,13 +15,14 @@ mkdir ~/.config
 mkdir ~/.config/nvim
 
 # .dotfiles内のエイリアス貼り付け
+ln -sh ~/.dotfiles/zsh/.zshrc ~/.zshrc
 ln -sh ~/.dotfiles/vim/.vimrc ~/.vimrc
 ln -sh ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
-ln -sh ~/.dotfiles/vim/.vimrc-neocomplete ~/.vim/.vimrc-neocomplete
-ln -sh ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 ln -sh ~/.dotfiles/git/.gitconfig ~/.gitconfig
-ln -sh ~/.dotfiles/dein/dein.toml ~/.vim/dein/dein.toml
 ln -sh ~/.dotfiles/tig/.tigrc ~/.tigrc
+ln -sh ~/.dotfiles/vim/.vimrc-neocomplete ~/.vim/.vimrc-neocomplete
+ln -sh ~/.dotfiles/dein/dein.toml ~/.vim/dein/dein.toml
+ln -sh ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 #ln -sh ~/.dotfiles/tmux/tmux-pane-border /usr/local/bin/ # tmuxでgitのブランチ名を表示するためのソース
 
 # deinのインストール
