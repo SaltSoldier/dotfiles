@@ -1,6 +1,11 @@
 # パス設定
 export PATH="/usr/local/mysql/bin:$PATH"
 export PERCOL="fzf"
+export PATH="/usr/local/Cellar/openssl/1.0.2s/bin:$PATH"
+
+# 文字化けの対処
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # vimコマンドでNeoVimを起動
 alias vim='nvim'
@@ -66,3 +71,4 @@ if [[ ! -n $TMUX && $- == *l* ]]; then
     :  # Start terminal normally
   fi
 fi
+eval "$(pyenv init -)"
