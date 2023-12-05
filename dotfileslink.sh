@@ -1,9 +1,9 @@
 # 初めからあるファイルを削除
-rm ~/.zshrc
-rm ~/.vimrc
-rm ~/.tmux.conf
-rm ~/.gitconfig
-rm ~/.tigrc
+rm -f ~/.zshrc
+rm -f ~/.vimrc
+rm -f ~/.tmux.conf
+rm -f ~/.gitconfig
+rm -f ~/.tigrc
 rm -rf ~/.vim
 rm -rf ~/.config/nvim
 rm -rf ~/.tmux
@@ -27,7 +27,7 @@ ln -sh ~/.dotfiles/python/.pythonstartup ~/.pythonstartup
 #ln -sh ~/.dotfiles/tmux/tmux-pane-border /usr/local/bin/ # tmuxでgitのブランチ名を表示するためのソース
 
 # deinのインストール
-sh ~/.dotfiles/dein/installer.sh ~/.vim/dein
+sh ~/dotfiles/dein/installer.sh ~/.vim/dein
 
 # tmuxプラグインマネージャーのtpmをクローン
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
