@@ -18,3 +18,9 @@ bind refs D ?git branch -D %(branch)
 bind diff A <git commit --amend
 bind diff C ?git cherry-pick %(commit)
 bind status c <git commit
+
+# git revert
+bind main v !?git revert %(commit)
+bind diff v !?git revert %(commit)
+bind main V !?git revert %(prompt) %(commit)
+bind diff V !?git revert %(prompt) %(commit)

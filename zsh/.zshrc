@@ -1,9 +1,28 @@
 # パス設定
 export PATH="/usr/local/mysql/bin:$PATH"
 export PERCOL="fzf"
+export PATH="/usr/local/Cellar/openssl/1.0.2s/bin:$PATH"
 
+# 文字化けの対処
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# エイリアス設定
 # vimコマンドでNeoVimを起動
 alias vim='nvim'
+# git系
+alias gca='git commit --amend'
+alias gpo='git push origin'
+alias gpfo='git push -f origin'
+alias grh='git reset --hard'
+alias gm='git merge'
+alias gmom='git merge origin/master'
+alias gf='git fetch'
+# tig系
+alias ti='tig --all'
+alias ti='tig --all'
+# unix系
+alias hg='history 1 | grep'
 
 # カレントディレクトリを表示
 PS1="%{$fg[cyan]%}[${USER}@${HOST%%.*} %1~]%(!.#.$)${reset_color} "
@@ -66,3 +85,39 @@ if [[ ! -n $TMUX && $- == *l* ]]; then
     :  # Start terminal normally
   fi
 fi
+
+# pyenv setting
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# javaのバージョン指定コマンド追加
+jdk() {
+        version=$1
+        export JAVA_HOME=$(/usr/libexec/java_home -v "$version");
+        java -version
+ }
+
+# pythonstartup
+export PYTHONSTARTUP=~/.pythonstartup
+
+# ruby setup
+[[ -d ~/.rbenv  ]] && \
+  export PATH=${HOME}/.rbenv/bin:${PATH} && \
+  eval "$(rbenv init -)"
+source $(brew --prefix nvm)/nvm.sh
+
+# direnv
+export EDITOR=vim
+eval "$(direnv hook zsh)"
+
+
+# terraformでたまにコマンドが失敗する対処方法
+export GODEBUG=asyncpreemptoff=1
+eval "$(anyenv init -)"
+
+# glod表現を許容する
+setopt nomatch

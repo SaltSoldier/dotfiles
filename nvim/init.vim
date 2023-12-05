@@ -12,6 +12,17 @@ set guicursor=a:blinkon1
 " ノーマルモード時だけ ; と : を入れ替える
 nnoremap ; :
 nnoremap : ;
+nnoremap <C-b> <Left>
+nnoremap <C-n> <Down>
+nnoremap <C-p> <Up>
+nnoremap <C-f> <Right>
+
+inoremap <C-b> <Left>
+inoremap <C-n> <Down>
+inoremap <C-p> <Up>
+inoremap <C-f> <Right>
+inoremap <C-j> <ESC>
+
 
 " スワップファイルを作らない
 set noswapfile
@@ -27,14 +38,15 @@ set backspace=indent,eol,start
 set laststatus=2
 
 " Tab系
-" 不可視文字を可視化(タブが「▸-」と表示される)
-set list listchars=tab:\▸\-
+" 不可視文字を可視化(タブが「>-」と表示される)
+set list
+set listchars=tab:>-,space:_
 " Tab文字を半角スペースにする
 set expandtab
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
-set tabstop=2
+set tabstop=4
 " 行頭でのTab文字の表示幅
-set shiftwidth=2
+set shiftwidth=4
 " 新しい行を開始したとき、新しい行のインデントを現在行と同じにする
 set autoindent
 

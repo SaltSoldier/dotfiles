@@ -23,6 +23,7 @@ ln -sh ~/.dotfiles/tig/.tigrc ~/.tigrc
 ln -sh ~/.dotfiles/vim/.vimrc-neocomplete ~/.vim/.vimrc-neocomplete
 ln -sh ~/.dotfiles/dein/dein.toml ~/.vim/dein/dein.toml
 ln -sh ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
+ln -sh ~/.dotfiles/python/.pythonstartup ~/.pythonstartup
 #ln -sh ~/.dotfiles/tmux/tmux-pane-border /usr/local/bin/ # tmuxでgitのブランチ名を表示するためのソース
 
 # deinのインストール
