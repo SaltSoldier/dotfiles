@@ -1,7 +1,9 @@
 # パス設定
 export PATH="/usr/local/mysql/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 export PERCOL="fzf"
 export PATH="/usr/local/Cellar/openssl/1.0.2s/bin:$PATH"
+export PATH="/usr/local/opt/mysql-client@8.0/bin:$PATH"
 
 # 文字化けの対処
 export LC_CTYPE=en_US.UTF-8
@@ -87,12 +89,12 @@ if [[ ! -n $TMUX && $- == *l* ]]; then
 fi
 
 # pyenv setting
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
+# if command -v pyenv 1>/dev/null 2>&1; then
+#   eval "$(pyenv init -)"
+# fi
 
 # javaのバージョン指定コマンド追加
 jdk() {
@@ -105,10 +107,10 @@ jdk() {
 export PYTHONSTARTUP=~/.pythonstartup
 
 # ruby setup
-[[ -d ~/.rbenv  ]] && \
-  export PATH=${HOME}/.rbenv/bin:${PATH} && \
-  eval "$(rbenv init -)"
-source $(brew --prefix nvm)/nvm.sh
+# [[ -d ~/.rbenv  ]] && \
+#   export PATH=${HOME}/.rbenv/bin:${PATH} && \
+#   eval "$(rbenv init -)"
+# source $(brew --prefix nvm)/nvm.sh
 
 # direnv
 export EDITOR=vim
@@ -116,8 +118,16 @@ eval "$(direnv hook zsh)"
 
 
 # terraformでたまにコマンドが失敗する対処方法
-export GODEBUG=asyncpreemptoff=1
-eval "$(anyenv init -)"
+# export GODEBUG=asyncpreemptoff=1
+# eval "$(anyenv init -)"
 
 # glod表現を許容する
 setopt nomatch
+
+# poetryパス追加
+export PATH="$HOME/.local/bin:$PATH"
+source "$HOME/.rye/env"
+
+# PATH優先順位の調整
+export PATH="$HOME/generativex/pj-aipc/.venv/bin:$PATH"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
